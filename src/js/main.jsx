@@ -1,18 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-//Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap"
+// Add SCSS files to bundle
+import '../styles/index.scss';
 
-// index.css'
-import '../styles/index.css'
+//Importing the Home class component
+import { Home } from '/src/js/components/Home.jsx';
 
-// components
-import Home from './components/Home';
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
-)
+// Render application to DOM
+ReactDOM.render(
+    <Home />,
+    document.querySelector('#root')
+);
